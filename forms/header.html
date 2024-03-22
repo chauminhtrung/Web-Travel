@@ -1,0 +1,762 @@
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Thông tin cá nhân</h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form class="needs-validation" novalidate>
+          <!-- Username -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Email</label>
+            <input
+              type="email"
+              id="usernamecn"
+              class="form-control usernamecn"
+              name="usernamecn"
+              placeholder="Email"
+              ng-model="usernamecn"
+              required />
+            <div class="invalid-feedback">Nhập Đúng Email.</div>
+          </div>
+          <!-- Password -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password </label>
+            <input
+              type="text"
+              id="passwordcn"
+              ng-model="passwordcn"
+              class="form-control password"
+              name="password"
+              placeholder="Password mới"
+              required />
+            <div class="invalid-feedback">Nhập Đúng Password.</div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+          Xác nhận
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- The Modal 2 -->
+<div class="modal fade" id="myModal2">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Quên mật khẩu</h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form class="needs-validation" novalidate>
+          <!-- Username -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Email</label>
+            <input
+              type="email"
+              id="usernameforgot"
+              class="form-control usernameforgot"
+              name="usernameforgot"
+              placeholder="Email"
+              ng-model="usernameforgot"
+              required />
+            <div class="invalid-feedback">Nhập Đúng Email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password Cũ</label>
+            <input
+              type="text"
+              id="passwordold"
+              ng-model="passwordold"
+              class="form-control passwordold"
+              name="passwordold"
+              placeholder="Password Cũ"
+              required />
+          </div>
+          <!-- Password -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password mới</label>
+            <input
+              type="password"
+              id="passwordforgot"
+              ng-model="passwordforgot"
+              class="form-control passwordforgot"
+              name="passwordforgot"
+              placeholder="Password mới"
+              required />
+            <div class="invalid-feedback">Nhập Đúng Password.</div>
+          </div>
+          <div class="mb-3">
+            <label for="password2" class="form-label">Nhập lại password</label>
+            <input
+              type="password"
+              id="passwordforgot2"
+              ng-model="passwordforgot2"
+              class="form-control passwordforgot2"
+              name="passwordforgot2"
+              placeholder="Nhập lại password"
+              required />
+            <div class="invalid-feedback">Nhập Đúng Password.</div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-bs-dismiss="modal"
+          ng-click="fogot()">
+          Xác nhận
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid px-0">
+    <div class="d-flex">
+      <a class="navbar-brand" href="/forms/main.html">
+        <img src="/assets/img/logo_travel.png" alt style="width: 50px" />
+        TrungCMT
+      </a>
+      <div class="dropdown d-none d-lg-block">
+        <button
+          class="btn btn-light-primary text-primary mt-2"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="fa-solid fa-list align-middle"></i>
+          Xếp Loại
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" href="#">Giới Thiệu</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" href="#">E-Book</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" href="#">Quan Hệ Cổ Đông</a>
+          </li>
+          <li class="dropdown-submenu">
+            <a class="dropdown-item" href="#">Đăng Ký Đại Lý</a>
+          </li>
+          <li class="dropdown-submenu dropend">
+            <a
+              class="dropdown-item dropdown-list-group-item"
+              data-bs-toggle="dropdown"
+              href="#">Hòm Thư Gợi Ý
+              <i class="fa-solid fa-caret-down" style="padding-left: 40px"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Hòm Thư Mới</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Hòm Thư Cũ</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="order-lg-3">
+      <div class="d-flex align-items-center">
+        <div class="dropdown">
+          <a
+            href="#!cart"
+            class="btn btn-light btn-icon rounded-circle d-flex align-items-center"
+            aria-label="Toggle theme (auto)">
+            <i class="fa-solid fa-cart-shopping align-middle"> </i>
+            <span
+              id="badgeCount"
+              class="badge rounded-pill bg-success position-absolute top-0 end-0"
+              style="font-size: 7px"></span>
+          </a>
+        </div>
+        <div class="dropdown p-2 visually-hidden" id="Nameuser">
+          <button
+            class="btn btn-light btn-icon rounded-circle d-flex align-items-center"
+            type="button"
+            aria-expanded="false"
+            data-bs-toggle="dropdown"
+            aria-label="Toggle theme (auto)">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-menu-end shadow"
+            aria-labelledby="bs-theme-text">
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center active"
+                data-bs-theme-value="light"
+                aria-pressed="true"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal"
+                ng-click="Hosocanhan()">
+                <i class="fa-solid fa-file"></i>
+                <span class="ms-2">Hồ sơ</span>
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center"
+                data-bs-theme-value="dark"
+                aria-pressed="false"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal2"
+                ng-click="forgotpass()">
+                <i class="fa-solid fa-lock"></i>
+                <span class="ms-2">Đổi mật khẩu</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <a
+          id="btnLogin"
+          href="#!login"
+          class="btn btn-outline-primary ms-2 d-none d-lg-block">Đăng Nhập</a>
+        <a
+          id="btnRegis"
+          href="#!reg"
+          class="btn btn-primary ms-2 d-none d-lg-block">Đăng Ký</a>
+
+        <a
+          id="btnlogout"
+          ng-click="Dangxuat()"
+          class="btn btn-danger ms-2 d-none d-lg-block visually-hidden">Đăng
+          Xuất</a>
+        <!-- Button -->
+        <button
+          class="navbar-toggler collapsed ms-2 ms-lg-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-default"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="icon-bar top-bar mt-0"></span>
+          <span class="icon-bar middle-bar"></span>
+          <span class="icon-bar bottom-bar"></span>
+        </button>
+      </div>
+    </div>
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbar-default">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#!home"
+            id="navbarHome"
+            aria-haspopup="true"
+            aria-expanded="false">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#!about"
+            id="navbarTour"
+            aria-haspopup="true"
+            aria-expanded="false">Giới Thiệu</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#!blog"
+            id="navbarBlog"
+            aria-haspopup="true"
+            aria-expanded="false">Tin tức du lịch</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#!tour"
+            id="navbarContact"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Tour</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link"
+            href="#!tour"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">Du Lịch
+            <i class="fa-solid fa-caret-down" style="padding-left: 5px"></i>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-arrow">
+            <li>
+              <h4 class="dropdown-header">Du Lịch Trong Nước</h4>
+            </li>
+            <li class="dropdown-submenu dropend">
+              <a
+                class="dropdown-item dropdown-list-group-item"
+                data-bs-toggle="dropdown"
+                href="#">Du Lịch Miền Bắc</a>
+              <ul class="dropdown-menu">
+                <li class="text-wrap">
+                  <h5 class="dropdown-header text-dark">Du Lịch Miền Bắc</h5>
+                  <p class="dropdown-text mb-0">
+                    Miền Bắc - Vùng đất ngàn năm văn hiến của dân tộc Việt Nam,
+                    nơi mang trên mình cả những dấu ấn của lịch sử và văn hóa
+                    độc đáo.
+                  </p>
+                </li>
+                <li>
+                  <hr class="mx-3" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/index.html">Du Lịch Hà Nội</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch SaPa</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Hạ Long</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Đồ Sơn</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Cát Bà</a>
+                </li>
+
+                <li class="dropdown-submenu dropend">
+                  <a class="dropdown-item dropdown-list-group-item" href="#">
+                    Du Lịch Mộc Châu
+                    <span class="badge bg-info ms-1">Mới</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown-submenu dropend">
+              <a class="dropdown-item dropdown-list-group-item" href="#">Du Lịch
+                Miền Trung</a>
+              <ul class="dropdown-menu">
+                <li class="text-wrap">
+                  <h5 class="dropdown-header text-dark">Du Lịch Miền Trung</h5>
+                  <p class="dropdown-text mb-0">
+                    Miền Trung- Vùng đất ngàn năm văn hiến của dân tộc Việt Nam,
+                    nơi mang trên mình cả những dấu ấn của lịch sử và văn hóa
+                    độc đáo.
+                  </p>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Đà Nẵng - Hội An</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Nha Trang</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Đà Lạt</a>
+                </li>
+                <li class="dropdown-submenu dropend">
+                  <a class="dropdown-item dropdown-list-group-item" href="#">
+                    Du Lịch Mũi Né
+                    <span class="badge bg-danger ms-1">Hết</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Huế</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Quảng Bình</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu dropend">
+              <a class="dropdown-item dropdown-list-group-item" href="#">Du Lịch
+                Miền Nam</a>
+              <ul class="dropdown-menu">
+                <li class="text-wrap">
+                  <h5 class="dropdown-header text-dark">Du Lịch Miền Nam</h5>
+                  <p class="dropdown-text mb-0">
+                    Miền Nam- Vùng đất ngàn năm văn hiến của dân tộc Việt Nam,
+                    nơi mang trên mình cả những dấu ấn của lịch sử và văn hóa
+                    độc đáo.
+                  </p>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Sài Gòn</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Phú Quốc</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Vũng Tàu
+                    <span class="badge bg-warning ms-1">Thích</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Côn Đảo</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <hr class="mx-3" />
+            </li>
+            <li>
+              <h4 class="dropdown-header">Du Lịch Nước Ngoài</h4>
+            </li>
+            <li class="dropdown-submenu dropend">
+              <a class="dropdown-item dropdown-list-group-item" href="#">Du Lịch
+                Châu Á</a>
+              <ul class="dropdown-menu">
+                <li class="text-wrap">
+                  <h5 class="dropdown-header text-dark">Du Lịch Châu Á</h5>
+                  <p class="dropdown-text mb-0">
+                    Châu Á - Được biết đến là một châu lục nổi tiếng với nhiều
+                    quốc gia xinh đẹp, nhiều điểm du lịch văn hóa lịch sử nổi
+                    tiếng.
+                  </p>
+                </li>
+                <li>
+                  <hr class="mx-3" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Thái Lan</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Nhật Bản</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Trung Quốc</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Hồng Kông</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Đài Loan</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu dropend">
+              <a class="dropdown-item dropdown-list-group-item" href="#">Du Lịch
+                Châu Âu</a>
+              <ul class="dropdown-menu">
+                <li class="text-wrap">
+                  <h5 class="dropdown-header text-dark">Du Lịch Châu Âu</h5>
+                  <p class="dropdown-text mb-0">
+                    Châu Âu - Được biết đến là một châu lục nổi tiếng với nhiều
+                    quốc gia xinh đẹp, nhiều điểm du lịch văn hóa lịch sử nổi
+                    tiếng.
+                  </p>
+                </li>
+                <li>
+                  <hr class="mx-3" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Pháp</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Hy Lạp</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Hà Lan</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Thỗ Nhĩ Kỳ</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Thụy Sĩ</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown-submenu dropend">
+              <a class="dropdown-item dropdown-list-group-item" href="#">Du Lịch
+                Châu Mỹ</a>
+              <ul class="dropdown-menu">
+                <li class="text-wrap">
+                  <h5 class="dropdown-header text-dark">Du Lịch Châu Mỹ</h5>
+                  <p class="dropdown-text mb-0">
+                    Châu Mỹ - Được biết đến là một châu lục nổi tiếng với nhiều
+                    quốc gia xinh đẹp, nhiều điểm du lịch văn hóa lịch sử nổi
+                    tiếng.
+                  </p>
+                </li>
+                <li>
+                  <hr class="mx-3" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Mỹ</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Brazil</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Canada</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown-submenu dropend">
+              <a class="dropdown-item dropdown-list-group-item" href="#">Du Lịch
+                Châu Phi</a>
+              <ul class="dropdown-menu">
+                <li class="text-wrap">
+                  <h5 class="dropdown-header text-dark">Du Lịch Châu Phi</h5>
+                  <p class="dropdown-text mb-0">
+                    Châu Phi - Được biết đến là một châu lục nổi tiếng với nhiều
+                    quốc gia xinh đẹp, nhiều điểm du lịch văn hóa lịch sử nổi
+                    tiếng.
+                  </p>
+                </li>
+                <li>
+                  <hr class="mx-3" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Nam Phi</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Du Lịch Kenya</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown dropdown-fullwidth">
+          <a
+            class="nav-link"
+            href="#"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">Hoạt Động
+            <i class="fa-solid fa-caret-down" style="padding-left: 5px"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-md">
+            <div class="px-4 pt-2 pb-2">
+              <div class="row">
+                <div class="col-12">
+                  <div class="lh-1 mb-5">
+                    <h3 class="mb-1">Hoạt động du lịch</h3>
+                    <p>
+                      Hoạt động du lịch là hoạt động của khách du lịch, tổ chức,
+                      cá nhân kinh doanh du lịch, cộng đồng dân cư và cơ quan,
+                      tổ chức, cá nhân có liên quan đến du lịch.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                  <div class="border-bottom pb-2 mb-3">
+                    <h5 class="mb-0">Hợp Tác</h5>
+                  </div>
+                  <div>
+                    <a href="#">
+                      <div class="d-flex mb-3">
+                        <img
+                          src="/assets/img/logo1.jpg"
+                          alt
+                          width="70px"
+                          height="60px" />
+                        <div class="ms-2">
+                          <small class="text-body">Planester Travel
+                            Agency</small>
+                          <h6 class="mb-0">
+                            Là một trong những đối tác độc quyền số 1
+                          </h6>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="d-flex mb-3">
+                        <img
+                          src="/assets/img/logo2.jpg"
+                          alt
+                          width="70px"
+                          height="60px" />
+                        <div class="ms-2">
+                          <small class="text-body">Globetropper Tour And
+                            Travel</small>
+                          <h6 class="mb-0">
+                            Là một trong những đối tác độc quyền số 1
+                          </h6>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="d-flex mb-3">
+                        <img
+                          src="/assets/img/logo3.jpg"
+                          alt
+                          width="70px"
+                          height="60px" />
+                        <div class="ms-2">
+                          <small class="text-body">Ecotropical Travels</small>
+                          <h6 class="mb-0">
+                            Là một trong những đối tác độc quyền số 1
+                          </h6>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div class="d-flex mb-3">
+                        <img
+                          src="/assets/img/logo4.jpg"
+                          alt
+                          width="70px"
+                          height="60px" />
+                        <div class="ms-2">
+                          <small class="text-body">SweetCase Travel
+                            Agency</small>
+                          <h6 class="mb-0">
+                            Là một trong những đối tác độc quyền số 1
+                          </h6>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-12 mt-4 mt-lg-0">
+                  <div class="border-bottom pb-2 mb-3">
+                    <h5 class="mb-0">Tour thịnh hành</h5>
+                  </div>
+                  <div>
+                    <ul class="nav flex-column col-md-6">
+                      <li class="nav-item">
+                        <div class="d-flex mb-3">
+                          <div class="hover14 column">
+                            <div>
+                              <figure>
+                                <img
+                                  src="/assets/img/Laos.png"
+                                  alt
+                                  width="190px"
+                                  height="130px" />
+                              </figure>
+                            </div>
+                          </div>
+
+                          <div class="ms-2">
+                            <a href="#" class="nav-link"><small
+                                class="text-body">Popular Tour</small></a>
+                            <h6 class="ms-2" style="width: 135px">
+                              Vietnam and Cambodia Tour 14 Days
+                            </h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="d-flex mb-3">
+                          <div class="hover14 column">
+                            <div>
+                              <figure>
+                                <img
+                                  src="/assets/img/vietnam.jpg"
+                                  alt
+                                  width="190px"
+                                  height="130px" />
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="ms-2">
+                            <a href="#" class="nav-link"><small
+                                class="text-body">Popular Tour</small></a>
+                            <h6 class="ms-2" style="width: 135px">
+                              Vietnam and Cambodia Tour 14 Days
+                            </h6>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="mt-3">
+                      <a href="#" class="btn btn-outline-primary btn-sm">View
+                        all Tours</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-12 mt-4 mt-lg-0">
+                  <div class="border-bottom pb-2 mb-3">
+                    <h5 class="mb-0">.</h5>
+                  </div>
+                  <div>
+                    <ul class="nav flex-column col-md-6">
+                      <li class="nav-item">
+                        <div class="d-flex mb-3">
+                          <div class="hover14 column">
+                            <div>
+                              <figure>
+                                <img
+                                  src="/assets/img/vietnam2.jpg"
+                                  alt
+                                  width="190px"
+                                  height="130px" />
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="ms-2">
+                            <a href="#" class="nav-link"><small
+                                class="text-body">Popular Tour</small></a>
+                            <h6 class="ms-2" style="width: 135px">
+                              Vietnam and Cambodia Tour 14 Days
+                            </h6>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="nav-item">
+                        <div class="d-flex mb-3">
+                          <div class="hover14 column">
+                            <div>
+                              <figure>
+                                <img
+                                  src="/assets/img/vietnam3.jpg"
+                                  alt
+                                  width="190px"
+                                  height="130px" />
+                              </figure>
+                            </div>
+                          </div>
+                          <div class="ms-2">
+                            <a href="#" class="nav-link"><small
+                                class="text-body">Popular Tour</small></a>
+                            <h6 class="ms-2" style="width: 130px">
+                              Vietnam tour family 14 Days
+                            </h6>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

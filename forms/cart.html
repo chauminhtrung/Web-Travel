@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Cart</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- bootstrap-5 -->
+    <link rel="stylesheet" href="/bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+
+    <!-- owl- -->
+    <link
+      rel="stylesheet"
+      href="/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+    />
+
+    <!-- JS -->
+    <script src="/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/bootstrap-5.3.2-dist/js/jquery.min.js"></script>
+    <!-- darkmode js -->
+    <script src="/ASM/assets/lib/darkMode.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon/favicon.ico"
+    />
+
+    <!-- CSS File -->
+    <link href="/ASM/assets/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/ASM/assets/css/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="/ASM/assets/lib/style-liberty-demo.css" rel="stylesheet" />
+    <link href="/ASM/assets/lib/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/ASM/assets/lib/simplebar.min.css" rel="stylesheet" />
+    <!-- Theme CSS File -->
+    <link href="/ASM/assets/css/theme.min.css" rel="stylesheet" />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- AngularJS -->
+    <script src="/angular-1.8.2/angular.min.js"></script>
+  </head>
+
+  <style></style>
+
+  <body class="bg-white">
+    <!-- End Header -->
+    <main>
+      <!-- Page header -->
+      <section class="h-100 h-custom">
+        <div class="container h-100 py-5">
+          <div
+            class="row d-flex justify-content-center align-items-center h-100"
+          >
+            <div class="col">
+              <div class="table-responsive">
+                <table class="table" ng-if="Tongtien > 0">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="h5">Shopping Bag</th>
+
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Option</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="pr in carditems">
+                      <th scope="row">
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="/ASM/assets/img/{{pr.Img}}"
+                            class="img-fluid rounded-3"
+                            style="width: 120px"
+                            alt="Book"
+                          />
+                          <div class="flex-column ms-4">
+                            <p
+                              class="mb-2 d-none d-lg-block"
+                              ng-model="pr.Name"
+                            >
+                              {{pr.Name}}
+                            </p>
+                          </div>
+                        </div>
+                      </th>
+
+                      <td class="align-middle">
+                        <div class="d-flex flex-row">
+                          <button
+                            class="btn btn-link px-2"
+                            ng-click="Edit($index)"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                          >
+                            <i class="fas fa-minus"></i>
+                          </button>
+
+                          <input
+                            id="Sl{{pr.chitiet}}"
+                            min="0"
+                            name="Sl"
+                            value="{{pr.Sl}}"
+                            type="number"
+                            ng-model="pr.Sl"
+                            class="form-control form-control-sm"
+                            style="width: 50px"
+                          />
+
+                          <button
+                            class="btn btn-link px-2"
+                            ng-click="Edit($index)"
+                            ng-model="pr.Sl"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                          >
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <p
+                          class="mb-0"
+                          style="font-weight: 500"
+                          ng-model="pr.Price"
+                          ng-bind="pr.Price*pr.Sl|number"
+                        ></p>
+                      </td>
+                      <td class="align-middle">
+                        <a
+                          href="javascript:void(0)"
+                          class="btn btn-danger"
+                          ng-click="Remove($index)"
+                          >Xóa</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="h3 d-flex justify-content-center align-items-center"
+                style="color: #754ffe"
+                ng-if="Tongtien == 0"
+              >
+                Giỏ hàng trống
+                <i class="fa-solid fa-cart-plus p-2 fs-3"></i>
+              </div>
+              <div
+                class="card shadow-2-strong mb-5 mb-lg-0"
+                style="border-radius: 16px"
+              >
+                <div class="card-body p-4">
+                  <div class="row">
+                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                      <form>
+                        <div class="d-flex flex-row pb-3">
+                          <div class="d-flex align-items-center pe-2">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="radioNoLabel"
+                              id="radioNoLabel1v"
+                              value=""
+                              aria-label="..."
+                              checked
+                            />
+                          </div>
+                          <div class="rounded border w-100 p-3">
+                            <p class="d-flex align-items-center mb-0">
+                              <i
+                                class="fab fa-cc-mastercard fa-2x text-dark pe-2"
+                              ></i
+                              >Thẻ tín dụng
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row pb-3">
+                          <div class="d-flex align-items-center pe-2">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="radioNoLabel"
+                              id="radioNoLabel2v"
+                              value=""
+                              aria-label="..."
+                            />
+                          </div>
+                          <div class="rounded border w-100 p-3">
+                            <p class="d-flex align-items-center mb-0">
+                              <i
+                                class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"
+                              ></i
+                              >Thẻ ghi nợ
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                          <div class="d-flex align-items-center pe-2">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="radioNoLabel"
+                              id="radioNoLabel3v"
+                              value=""
+                              aria-label="..."
+                            />
+                          </div>
+                          <div class="rounded border w-100 p-3">
+                            <p class="d-flex align-items-center mb-0">
+                              <i
+                                class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"
+                              ></i
+                              >PayPal
+                            </p>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-6">
+                      <div class="row">
+                        <div class="col-12 col-xl-6">
+                          <div class="form-outline mb-4 mb-xl-5">
+                            <label class="form-label" for="typeName"
+                              >tên trên thẻ</label
+                            >
+                            <input
+                              type="text"
+                              id="typeName"
+                              class="form-control form-control-lg"
+                              siez="17"
+                              placeholder=""
+                            />
+                          </div>
+
+                          <div class="form-outline mb-4 mb-xl-5">
+                            <label class="form-label" for="typeExp"
+                              >Hết hạn</label
+                            >
+                            <input
+                              type="text"
+                              id="typeExp"
+                              class="form-control form-control-lg"
+                              placeholder=""
+                              size="7"
+                              id="exp"
+                              minlength="7"
+                              maxlength="7"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                          <div class="form-outline mb-4 mb-xl-5">
+                            <label class="form-label" for="typeText"
+                              >Số thẻ</label
+                            >
+                            <input
+                              type="text"
+                              id="typeText"
+                              class="form-control form-control-lg"
+                              siez="17"
+                              placeholder=""
+                              minlength="19"
+                              maxlength="19"
+                            />
+                          </div>
+
+                          <div class="form-outline mb-4 mb-xl-5">
+                            <label class="form-label" for="typeText">Cvv</label>
+                            <input
+                              type="password"
+                              id="typeText"
+                              class="form-control form-control-lg"
+                              placeholder="&#9679;&#9679;&#9679;"
+                              size="1"
+                              minlength="3"
+                              maxlength="3"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-3">
+                      <div
+                        class="d-flex justify-content-between"
+                        style="font-weight: 500"
+                      >
+                        <p class="mb-2">Tổng</p>
+                        <p class="mb-2" ng-bind="Tongtien|number"></p>
+                      </div>
+
+                      <hr class="my-4" />
+
+                      <div
+                        class="d-flex justify-content-between mb-4"
+                        style="font-weight: 500"
+                      >
+                        <p class="mb-2">Total (tax included)</p>
+                        <p class="mb-2">$26.48</p>
+                      </div>
+
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-block btn-lg"
+                      >
+                        <div
+                          class="d-flex justify-content-between"
+                          ng-click="test()"
+                        >
+                          <span>Thanh Toán</span>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

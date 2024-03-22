@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Tour</title>
+    <meta content name="description" />
+    <meta content name="keywords" />
+
+    <!-- alert sweet 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+
+    <!-- bootstrap-5 -->
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+
+    <!-- JS -->
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- owl- -->
+    <link
+      rel="stylesheet"
+      href="/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon/favicon.ico" />
+
+    <!-- CSS File -->
+    <link href="/assets/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="/assets/lib/style-liberty-demo.css" rel="stylesheet" />
+    <link href="/assets/lib/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/assets/lib/simplebar.min.css" rel="stylesheet" />
+    <!-- Theme CSS File -->
+    <link href="/assets/css/theme.min.css" rel="stylesheet" />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Angular JS -->
+    <script src="/angular-1.8.2/angular.min.js"></script>
+    <script src="/angular-1.8.2/angular-route.js"></script>
+  </head>
+
+  <style></style>
+
+  <body class="bg-white" ng-app="myApp" ng-controller="myCtrl">
+    <!-- End Header -->
+    <main>
+      <div class="container-fluid pt-5 p-0">
+        <div class="row g-0">
+          <aside
+            class="col-lg-4 col-xl-3 border-top-lg border-end-lg shadow-sm px-3 px-xl-4 px-xxl-5 pt-lg-2">
+            <div class="offcanvas-lg offcanvas-start" id="filters-sidebar">
+              <div class="offcanvas-header d-flex d-lg-none align-items-center">
+                <h2 class="h5 mb-0">Filters</h2>
+                <button
+                  class="btn-close"
+                  type="button"
+                  data-bs-dismiss="offcanvas"
+                  data-bs-target="#filters-sidebar"></button>
+              </div>
+              <!-- Search form-->
+              <div
+                class="offcanvas-header d-block border-bottom pt-0 pt-lg-4 px-lg-0">
+                <form class="form-group mb-lg-2 rounded-pill">
+                  <div class="input-group">
+                    <span class="input-group-text text-muted"><i
+                        class="fa-solid fa-magnifying-glass"></i></span>
+                    <input
+                      class="form-control"
+                      type="text"
+                      ng-model="search"
+                      placeholder="Search..." />
+                  </div>
+                  <button
+                    class="btn btn-primary rounded-pill d-lg-inline-block d-none"
+                    type="button">
+                    Tìm Kiếm
+                  </button>
+                  <button
+                    class="btn btn-icon btn-primary rounded-circle flex-shrink-0 d-lg-none d-inline-flex"
+                    type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+              </div>
+              <!-- Nav tabs-->
+              <div
+                class="offcanvas-header d-block border-bottom py-lg-4 py-3 px-lg-0">
+                <ul class="nav nav-pills" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link d-flex align-items-center active"
+                      href="#categories"
+                      data-bs-toggle="tab"
+                      role="tab"
+                      aria-selected="true"><i
+                        class="fa-solid fa-list me-2"></i>Thể loại</a>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link d-flex align-items-center"
+                      href="#filters"
+                      data-bs-toggle="tab"
+                      role="tab"
+                      aria-selected="false"
+                      tabindex="-1"><i class="fa-solid fa-server me-2"></i>Bộ
+                      lọc</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="offcanvas-body py-lg-4">
+                <!-- Tabs content-->
+                <div class="tab-content">
+                  <!-- Categories-->
+                  <div class id="categories" role="tabpanel">
+                    <div class="row row-cols-lg-2 row-cols-1 g-3">
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)"
+                          ng-click="MienBac()">
+                          <div
+                            class="icon-box-media bg-faded-accent text-accent rounded-circle mb-3 mx-auto">
+                            <i class="fa-solid fa-wind fs-2"></i>
+                          </div>
+                          <h3 class="icon-box-title fs-base mb-0">
+                            Miền Bắc
+                          </h3></a>
+                      </div>
+
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)"
+                          ng-click="MienTrung()">
+                          <div
+                            class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto">
+                            <i class="fa-solid fa-dragon fs-2"></i>
+                          </div>
+                          <h3 class="icon-box-title fs-base mb-0">
+                            Miền Trung
+                          </h3></a>
+                      </div>
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)"
+                          ng-click="MienNam()">
+                          <div
+                            class="icon-box-media bg-faded-warning text-warning rounded-circle mb-3 mx-auto">
+                            <i class="fa-solid fa-gopuram fs-2"></i>
+                          </div>
+                          <h3 class="icon-box-title fs-base mb-0">
+                            Miền Nam
+                          </h3></a>
+                      </div>
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)"
+                          ng-click="MienTay()">
+                          <div
+                            class="icon-box-media bg-faded-success text-success rounded-circle mb-3 mx-auto">
+                            <i class="fa-brands fa-pagelines fs-2"></i>
+                          </div>
+                          <h3 class="icon-box-title fs-base mb-0">
+                            Miền Tây
+                          </h3></a>
+                      </div>
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)"
+                          ng-click="ChauAu()">
+                          <div
+                            class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto">
+                            <i class="fa-solid fa-earth-europe fs-2"></i>
+                          </div>
+                          <h3 class="icon-box-title fs-base mb-0">
+                            Châu Âu
+                          </h3></a>
+                      </div>
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)"
+                          ng-click="ChauA()">
+                          <div
+                            class="icon-box-media bg-faded-info text-info rounded-circle mb-3 mx-auto">
+                            <i class="fa-solid fa-football fs-2"></i>
+                          </div>
+                          <h3 class="icon-box-title fs-base mb-0">Châu
+                            Á</h3></a>
+                      </div>
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)">
+                          <div
+                            class="icon-box-media bg-faded-success text-success rounded-circle mb-3 mx-auto">
+                            <i class="fa-solid fa-umbrella-beach fs-2"></i>
+                          </div>
+                          <h3 class="icon-box-title fs-base mb-0">
+                            Phú Quốc
+                          </h3></a>
+                      </div>
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)"
+                          ng-click="DaLat()">
+                          <div
+                            class="icon-box-media bg-faded-warning text-warning rounded-circle mb-3 mx-auto">
+                            <i class="fa-brands fa-cloudversify fs-2"></i>
+                          </div>
+                          <h3 class="icon-box-title fs-base mb-0">Đà
+                            Lạt</h3></a>
+                      </div>
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)">
+                          <div
+                            class="icon-box-media text-primary rounded-circle mb-3 mx-auto">
+                            <i class="fa-solid fa-anchor fs-2"></i>
+                          </div>
+
+                          <h3 class="icon-box-title fs-base mb-0">
+                            Nha Trang
+                          </h3></a>
+                      </div>
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)"
+                          ng-click="VungTau()">
+                          <div
+                            class="icon-box-medi text-info rounded-circle mb-3 mx-auto">
+                            <i class="fa-solid fa-ship fs-2"></i>
+                          </div>
+                          <h3 class="icon-box-title fs-base mb-0">
+                            Vũng Tàu
+                          </h3></a>
+                      </div>
+                      <div class="col">
+                        <a
+                          class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center"
+                          href="javascript:void(0)"
+                          ng-click="All()">
+                          <div
+                            class="icon-box-medi text-info rounded-circle mb-3 mx-auto">
+                            <i class="fa-solid fa-reply-all fs-2"></i>
+                          </div>
+                          <h3 class="icon-box-title fs-base mb-0">Tất
+                            Cả</h3></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Filters-->
+                  <div class="tab-pane fade" id="filters" role="tabpanel">
+                    <div class="pb-4 mb-2">
+                      <h3 class="h3">Địa Điểm</h3>
+                      <select class="form-select mb-2">
+                        <option value disabled>Choose city</option>
+                        <option value="VungTau" selected>Vũng Tàu</option>
+                        <option value="NhaTrang">Nha Trang</option>
+                        <option value="HaNoi">Hà Nội</option>
+                        <option value="PhuQuoc">Phú Quốc</option>
+                        <option value="NhatBan">Nhật Bản</option>
+                        <option value="BenTre">Bến Tre</option>
+                        <option value="SocTrang">Sóc Trăng</option>
+                        <option value="ĐaLat">Đà Lạt</option>
+                      </select>
+                      <select class="form-select">
+                        <option value selected disabled>
+                          Chọn quận
+                        </option>
+                        <option value="Quan1">Quận 1</option>
+                        <option value="Quan2">Quận 2</option>
+                        <option value="Quan3">Quận 3</option>
+                        <option value="Quan4">Quận 4</option>
+                        <option value="Quan5">Quận 5</option>
+                        <option value="Quan6">Quận 6</option>
+                        <option value="Quan7">Quận 7</option>
+                        <option value="Quan9">Quận 9</option>
+                      </select>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h3">Loại</h3>
+                      <div
+                        class="dropdown mb-sm-0 mb-3"
+                        data-bs-toggle="select">
+                        <button
+                          class="btn btn-outline-secondary d-flex align-items-center w-100 px-4 fw-normal text-start"
+                          type="button"
+                          data-bs-toggle="dropdown">
+                          <i class="fa-solid fa-list me-2 text-mute"></i><span
+                            class="dropdown-toggle-label d-block w-100">Tất Cả
+                            Địa Điểm</span>
+                        </button>
+                        <input type="hidden" />
+                        <ul class="dropdown-menu w-100">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i
+                                class="fa-solid fa-wind me-2 fs-lg opacity-60"></i>
+                              <span class="dropdown-item-label">Miền
+                                Bắc</span></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i
+                                class="fa-solid fa-dragon me-2 fs-lg opacity-60"></i>
+                              <span class="dropdown-item-label">Miền
+                                Trung</span></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i
+                                class="fa-solid fa-gopuram me-2 fs-lg opacity-60"></i>
+                              <span class="dropdown-item-label">Miền
+                                Nam</span></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i
+                                class="fa-brands fa-pagelines me-2 fs-lg opacity-60"></i>
+                              <span class="dropdown-item-label">Miền
+                                Tây</span></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i
+                                class="fa-solid fa-earth-europe me-2 fs-lg opacity-60"></i>
+                              <span class="dropdown-item-label">Châu
+                                Âu</span></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i
+                                class="fa-solid fa-football me-2 fs-lg opacity-60"></i>
+                              <span class="dropdown-item-label">Châu
+                                Mỹ</span></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i
+                                class="fa-solid fa-umbrella-beach me-2 fs-lg opacity-60"></i>
+                              <span class="dropdown-item-label">Phú
+                                Quốc</span></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i
+                                class="fa-brands fa-cloudversify me-2 fs-lg opacity-60"></i>
+                              <span class="dropdown-item-label">Đà
+                                Lạt</span></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i
+                                class="fa-solid fa-anchor me-2 fs-lg opacity-60"></i>
+                              <span class="dropdown-item-label">Nha
+                                Trang</span></a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <i
+                                class="fa-solid fa-ship me-2 fs-lg opacity-60"></i>
+                              <span class="dropdown-item-label">Vũng
+                                Tàu</span></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h3">Loại Tour</h3>
+                      <div
+                        class="overflow-auto"
+                        data-simplebar="init"
+                        data-simplebar-auto-hide="false"
+                        style="height: 11rem">
+                        <div class="simplebar-wrapper" style="margin: 0px">
+                          <div class="simplebar-height-auto-observer-wrapper">
+                            <div class="simplebar-height-auto-observer"></div>
+                          </div>
+                          <div class="simplebar-mask">
+                            <div
+                              class="simplebar-offset"
+                              style="right: 0px; bottom: 0px">
+                              <div
+                                class="simplebar-content-wrapper"
+                                tabindex="0"
+                                role="region"
+                                aria-label="scrollable content"
+                                style="height: auto; overflow: hidden">
+                                <div
+                                  class="simplebar-content"
+                                  style="padding: 0px">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="hotel" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="hotel">Tour Lễ - Tết</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="hostel" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="hostel">Tour Lễ 30/4</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="motel" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="motel">Tour bán chạy - HOT</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="apartment"
+                                      checked />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="apartment">Tour dành cho khách
+                                      đoàn</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="cottage" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="cottage">Tour đường bay</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="boutique-hotel" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="boutique-hotel">Tour đường bộ</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="room" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="room">Tour Lễ 2/9</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="land" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="land">Combo du lịch</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="commercial" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="commercial">Tour giờ chót</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="parking-lot" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="parking-lot">Tour ngắn tại thời
+                                      điểm,City tour,hàng
+                                      ngày</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="simplebar-placeholder"
+                            style="width: 0px; height: 0px"></div>
+                        </div>
+                        <div
+                          class="simplebar-track simplebar-horizontal"
+                          style="visibility: hidden">
+                          <div
+                            class="simplebar-scrollbar simplebar-visible"
+                            style="width: 0px; display: none"></div>
+                        </div>
+                        <div
+                          class="simplebar-track simplebar-vertical"
+                          style="visibility: hidden">
+                          <div
+                            class="simplebar-scrollbar simplebar-visible"
+                            style="
+                              height: 0px;
+                              display: none;
+                              transform: translate3d(0px, 0px, 0px);
+                            "></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h3">Giá</h3>
+                      <div
+                        class="range-slider"
+                        data-start-min="300"
+                        data-start-max="700"
+                        data-min="50"
+                        data-max="1000"
+                        data-step="20">
+                        <div
+                          class="range-slider-ui noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
+                          <div class="noUi-base">
+                            <div class="noUi-connects">
+                              <div
+                                class="noUi-connect"
+                                style="
+                                  transform: translate(27.3684%, 0px)
+                                    scale(0.421053, 1);
+                                "></div>
+                            </div>
+                            <div
+                              class="noUi-origin"
+                              style="
+                                transform: translate(-72.6316%, 0px);
+                                z-index: 5;
+                              ">
+                              <div
+                                class="noUi-handle noUi-handle-lower"
+                                data-handle="0"
+                                tabindex="0"
+                                role="slider"
+                                aria-orientation="horizontal"
+                                aria-valuemin="50.0"
+                                aria-valuemax="710.0"
+                                aria-valuenow="310.0"
+                                aria-valuetext="$310">
+                                <div class="noUi-touch-area"></div>
+                                <div class="noUi-tooltip">$310</div>
+                              </div>
+                            </div>
+                            <div
+                              class="noUi-origin"
+                              style="
+                                transform: translate(-30.5263%, 0px);
+                                z-index: 4;
+                              ">
+                              <div
+                                class="noUi-handle noUi-handle-upper"
+                                data-handle="1"
+                                tabindex="0"
+                                role="slider"
+                                aria-orientation="horizontal"
+                                aria-valuemin="310.0"
+                                aria-valuemax="1000.0"
+                                aria-valuenow="710.0"
+                                aria-valuetext="$710">
+                                <div class="noUi-touch-area"></div>
+                                <div class="noUi-tooltip">$710</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="w-50 pe-2">
+                            <div class="input-group">
+                              <span class="input-group-text fs-base">$</span>
+                              <input
+                                class="form-control range-slider-value-min"
+                                type="text" />
+                            </div>
+                          </div>
+                          <div class="text-muted">—</div>
+                          <div class="w-50 ps-2">
+                            <div class="input-group">
+                              <span class="input-group-text fs-base">$</span>
+                              <input
+                                class="form-control range-slider-value-max"
+                                type="text" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h3">Đánh giá trung bình</h3>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="5-star" />
+                        <label
+                          class="form-check-label fs-sm align-middle mt-n2"
+                          for="5-star"><span class="star-rating">
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="4-star" />
+                        <label
+                          class="form-check-label fs-sm align-middle mt-n2"
+                          for="4-star"><span class="star-rating">
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active"></i>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="3-star" />
+                        <label
+                          class="form-check-label fs-sm align-middle mt-n2"
+                          for="3-star"><span class="star-rating">
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active"></i>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="2-star" />
+                        <label
+                          class="form-check-label fs-sm align-middle mt-n2"
+                          for="2-star"><span class="star-rating">
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active"></i>
+                          </span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="1-star" />
+                        <label
+                          class="form-check-label fs-sm align-middle mt-n2"
+                          for="1-star"><span class="star-rating">
+                            <i
+                              class="fa-solid fa-star fi-star-filled active text-warning"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active"></i>
+                            <i
+                              class="fa-solid fa-star fi-star-filled active"></i>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h3">Số Người</h3>
+                      <select class="form-select mb-2">
+                        <option value="1-room" selected>1 người</option>
+                        <option value="2-rooms">1 người</option>
+                        <option value="3-rooms">2 người</option>
+                        <option value="4-rooms">3 người</option>
+                        <option value="5-rooms">4 người</option>
+                      </select>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h3">Điểm Khởi Hành</h3>
+                      <div
+                        class="overflow-auto"
+                        data-simplebar="init"
+                        data-simplebar-auto-hide="false"
+                        style="height: 11rem">
+                        <div class="simplebar-wrapper" style="margin: 0px">
+                          <div class="simplebar-height-auto-observer-wrapper">
+                            <div class="simplebar-height-auto-observer"></div>
+                          </div>
+                          <div class="simplebar-mask">
+                            <div
+                              class="simplebar-offset"
+                              style="right: 0px; bottom: 0px">
+                              <div
+                                class="simplebar-content-wrapper"
+                                tabindex="0"
+                                role="region"
+                                aria-label="scrollable content"
+                                style="height: auto; overflow: hidden">
+                                <div
+                                  class="simplebar-content"
+                                  style="padding: 0px">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="parking" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="parking">Từ Hà Nội</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="restaurant" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="restaurant">Từ Hồ Chí Minh</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="pet-friendly" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="pet-friendly">Từ Đà Nẵng</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="room-service"
+                                      checked />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="room-service">Từ Nha Trang</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="fitness-center" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="fitness-center">Từ Hải Phòng</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="free-wifi"
+                                      checked />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="free-wifi">Từ Huế</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="spa-lounge" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="spa-lounge">Từ Vinh</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="bar" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="bar">Từ Thanh Hóa</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="swimming-pool" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="swimming-pool">Từ Đồng Thới</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="simplebar-placeholder"
+                            style="width: 0px; height: 0px"></div>
+                        </div>
+                        <div
+                          class="simplebar-track simplebar-horizontal"
+                          style="visibility: hidden">
+                          <div
+                            class="simplebar-scrollbar simplebar-visible"
+                            style="width: 0px; display: none"></div>
+                        </div>
+                        <div
+                          class="simplebar-track simplebar-vertical"
+                          style="visibility: hidden">
+                          <div
+                            class="simplebar-scrollbar simplebar-visible"
+                            style="
+                              height: 0px;
+                              display: none;
+                              transform: translate3d(0px, 0px, 0px);
+                            "></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h3">Điểm Đến</h3>
+                      <div
+                        class="overflow-auto"
+                        data-simplebar="init"
+                        data-simplebar-auto-hide="false"
+                        style="height: 11rem">
+                        <div class="simplebar-wrapper" style="margin: 0px">
+                          <div class="simplebar-height-auto-observer-wrapper">
+                            <div class="simplebar-height-auto-observer"></div>
+                          </div>
+                          <div class="simplebar-mask">
+                            <div
+                              class="simplebar-offset"
+                              style="right: 0px; bottom: 0px">
+                              <div
+                                class="simplebar-content-wrapper"
+                                tabindex="0"
+                                role="region"
+                                aria-label="scrollable content"
+                                style="height: auto; overflow: hidden">
+                                <div
+                                  class="simplebar-content"
+                                  style="padding: 0px">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="kitchen" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="kitchen">Phú Quốc</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="private-bathroom" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="private-bathroom">Đà Lạt</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="air-conditioning"
+                                      checked />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="air-conditioning">Vũng Tàu</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="desk" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="desk">Nha Trang</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="terrace" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="terrace">Cần Thơ</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="washing-machine" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="washing-machine">Hà Nội</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="heating" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="heating">Nhật Bản</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="checkbox"
+                                      id="laundry-service" />
+                                    <label
+                                      class="form-check-label fs-sm"
+                                      for="laundry-service">Canada</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="simplebar-placeholder"
+                            style="width: 0px; height: 0px"></div>
+                        </div>
+                        <div
+                          class="simplebar-track simplebar-horizontal"
+                          style="visibility: hidden">
+                          <div
+                            class="simplebar-scrollbar simplebar-visible"
+                            style="width: 0px; display: none"></div>
+                        </div>
+                        <div
+                          class="simplebar-track simplebar-vertical"
+                          style="visibility: hidden">
+                          <div
+                            class="simplebar-scrollbar simplebar-visible"
+                            style="
+                              height: 0px;
+                              display: none;
+                              transform: translate3d(0px, 0px, 0px);
+                            "></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="border-top py-4">
+                      <button
+                        class="btn btn-outline-primary rounded-pill"
+                        type="button">
+                        <i class="fi-rotate-right me-2"></i>Reset filters
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          <article
+            class="col-lg-8 col-xl-9 position-relative overflow-hidden pb-5 pt-4 px-3 px-xl-4 px-xxl-5">
+            <nav class="mb-3 pt-md-2" aria-label="Breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item h5">
+                  <a href="/forms/main.html">Trang Chủ</a>
+                </li>
+                <li class="breadcrumb-item active h5" aria-current="page">
+                  <a href="/forms/tour.html">Tour</a>
+                </li>
+                <li class="breadcrumb-item active h5" aria-current="page">
+                  Tìm Tour
+                </li>
+              </ol>
+            </nav>
+
+            <div
+              class="d-sm-flex align-items-center justify-content-between pb-3 pb-sm-4">
+              <h1 class="h2 mb-sm-0">Tìm kiếm địa điểm du lịch</h1>
+              <a
+                class="d-inline-block fw-bold text-decoration-none py-1 fs-4"
+                href="javascript:void(0)"
+                data-bs-toggle-class="invisible"
+                data-bs-target="#map"><i class="fa-solid fa-map me-2"></i>Map
+                view</a>
+            </div>
+
+            <div
+              class="d-flex flex-sm-row flex-column align-items-sm-center align-items-stretch my-2">
+              <div class="d-flex align-items-center flex-shrink-0">
+                <label class="fs-4 me-2 pe-1 text-nowrap" for="sortby"><i
+                    class="fi-arrows-sort text-muted mt-n1 me-2"></i>Sắp xếp
+                  theo:</label>
+                <select
+                  class="form-select form-select-sm fs-4"
+                  id="sortby"
+                  ng-model="confirmed"
+                  ng-change="sortby()">
+                  <option>Mới Nhất</option>
+                  <option>Ưu Thích</option>
+                  <option>Thấp - Cao Giá</option>
+                  <option>Cao - Thấp Giá</option>
+                  <option>Đánh giá cao</option>
+                  <option>Đánh giá trung bình</option>
+                </select>
+              </div>
+              <hr class="d-none d-sm-block w-100 mx-4" />
+              <div
+                class="d-none d-sm-flex align-items-center flex-shrink-0 text-muted">
+                <i class="fi-check-circle me-2"></i><span class="fs-4 mt-n1">148
+                  results</span>
+              </div>
+            </div>
+
+            <div
+              class="row row-cols-xl-3 row-cols-sm-2 row-cols-md-2 row-cols-1 gy-4 gx-3 gx-xxl-4 py-4">
+              <!-- Item-->
+              <div
+                class="col pb-sm-2"
+                ng-repeat="card in cards|orderBy:prop|limitTo:4:begin|filter:search">
+                <article class="position-relative">
+                  <div class="position-relative mb-3">
+                    <button
+                      class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle position-absolute top-0 end-0 m-3 zindex-5"
+                      type="button"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="left"
+                      aria-label="Add to Favorites"
+                      data-bs-original-title="Add to Favorites"
+                      ng-click="add($index)">
+                      <i class="fa-regular fa-heart"></i></button><img
+                      class="rounded-3"
+                      src="/assets/img/{{card.Img}}"
+                      alt="Article img"
+                      width="100%"
+                      height="250px"
+                      style="object-fit: cover" />
+                  </div>
+                  <h3 class="mb-2 fs-lg">
+                    <a class="nav-link"
+                      href="#!alltour/{{card.Src}}">{{card.Name}}</a>
+                  </h3>
+                  <ul class="list-inline mb-0 fs-xs">
+                    <li class="list-inline-item pe-1">
+                      <i
+                        class="fa-solid fa-star mt-n1 me-1 fs-base text-warning align-middle"></i><b>{{card.Rate}}</b><span
+                        class="text-muted">&nbsp;(48)</span>
+                    </li>
+                    <li class="list-inline-item pe-1">
+                      <i
+                        class="fa-regular fa-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>{{card.Price|currency}}
+                    </li>
+                    <li class="list-inline-item pe-1">
+                      <i
+                        class="fa-solid fa-location-crosshairs mt-n1 me-1 fs-3 text-muted align-middle"></i>{{card.Km}}
+                    </li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+
+            <nav class="border-top pb-md-4 pt-4" aria-label="Pagination">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" ng-click="first()">Previous</a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" ng-click="next()">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" ng-click="next()">3</a>
+                </li>
+                <li
+                  class="page-item mt-3"
+                  style="padding-left: 5px; padding-right: 5px">
+                  <a class href="#">...</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" ng-click="next()">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </article>
+        </div>
+      </div>
+    </main>
+    <script src="/assets/js/tourchitiet.js"></script>
+    <script>
+      function myfunc($scope, $http) {
+        $scope.cards;
+        $http.get("tours.json").then(function (respone) {
+          $scope.cards = respone.data
+        })
+        
+        let add = 0;
+
+        $scope.prop = "Name";
+
+        $scope.test = function () {
+          add++;
+          document.getElementById("badgeCount").innerHTML = add;
+        };
+
+        $scope.MienBac = function () {
+          $scope.cards = list;
+          let cardmienbac = [];
+          for (let index = 0; index < $scope.cards.length; index++) {
+            if ($scope.cards[index].Loca === "MienBac") {
+              cardmienbac.push($scope.cards[index]);
+            }
+          }
+          $scope.cards = cardmienbac;
+        };
+
+        $scope.MienTay = function () {
+          $scope.cards = list;
+          let cardmientay = [];
+          for (let index = 0; index < $scope.cards.length; index++) {
+            if ($scope.cards[index].Loca === "MienTay") {
+              cardmientay.push($scope.cards[index]);
+            }
+          }
+          $scope.cards = cardmientay;
+        };
+
+        $scope.MienNam = function () {
+          $scope.cards = list;
+          let cardmiennam = [];
+          for (let index = 0; index < $scope.cards.length; index++) {
+            if ($scope.cards[index].Loca === "MienNam") {
+              cardmiennam.push($scope.cards[index]);
+            }
+          }
+          $scope.cards = cardmiennam;
+        };
+
+        $scope.MienTrung = function () {
+          $scope.cards = list;
+          let cardMienTrung = [];
+          for (let index = 0; index < $scope.cards.length; index++) {
+            if ($scope.cards[index].Loca === "MienTrung") {
+              cardMienTrung.push($scope.cards[index]);
+            }
+          }
+          $scope.cards = cardMienTrung;
+        };
+
+        $scope.ChauA = function () {
+          $scope.cards = list;
+          let cardChauA = [];
+          for (let index = 0; index < $scope.cards.length; index++) {
+            if ($scope.cards[index].Loca === "ChauA") {
+              cardChauA.push($scope.cards[index]);
+            }
+          }
+          $scope.cards = cardChauA;
+        };
+
+        $scope.ChauAu = function () {
+          $scope.cards = list;
+          let cardChauAu = [];
+          for (let index = 0; index < $scope.cards.length; index++) {
+            if ($scope.cards[index].Loca === "ChauAu") {
+              cardChauAu.push($scope.cards[index]);
+            }
+          }
+          $scope.cards = cardChauAu;
+        };
+
+        $scope.VungTau = function () {
+          $scope.cards = list;
+          let cardVungTau = [];
+          for (let index = 0; index < $scope.cards.length; index++) {
+            if ($scope.cards[index].Name === "Vũng Tàu (Miền Nam)") {
+              cardVungTau.push($scope.cards[index]);
+            }
+          }
+          $scope.cards = cardVungTau;
+        };
+
+        $scope.DaLat = function () {
+          $scope.cards = list;
+          let cardDaLat = [];
+          for (let index = 0; index < $scope.cards.length; index++) {
+            if ($scope.cards[index].Name === "Đà Lạt (Miền Trung)") {
+              cardDaLat.push($scope.cards[index]);
+            }
+          }
+          $scope.cards = cardDaLat;
+        };
+
+        $scope.All = function () {
+          $scope.cards = list;
+        };
+        $scope.sortby = function () {
+          let x = document.getElementById("sortby").value;
+          if (x === "Thấp - Cao Giá") {
+            $scope.prop = "Price";
+          }
+          if (x === "Cao - Thấp Giá") {
+            $scope.prop = "-Price";
+          }
+          if (x === "Đánh giá cao") {
+            $scope.prop = "-Rate";
+          }
+          if (x === "Đánh giá trung bình") {
+            $scope.prop = "Rate";
+          }
+        };
+      }
+
+      var app = angular.module("myApp", []);
+      app.controller("myCtrl", myfunc);
+    </script>
+  </body>
+</html>

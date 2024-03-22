@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Tour</title>
+    <meta content name="description" />
+    <meta content name="keywords" />
+
+    <!-- alert sweet 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+
+    <!-- bootstrap-5 -->
+    <link rel="stylesheet" href="/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
+
+    <!-- JS -->
+    <script src="/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- darkmode js -->
+    <script src="/assets/lib/darkMode.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../../assets/images/favicon/favicon.ico" />
+
+    <!-- CSS File -->
+    <link href="/assets/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="/assets/lib/style-liberty-demo.css" rel="stylesheet" />
+    <link href="/assets/lib/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/assets/lib/simplebar.min.css" rel="stylesheet" />
+    <!-- Theme CSS File -->
+    <link href="/assets/css/theme.min.css" rel="stylesheet" />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+
+  <style></style>
+
+  <body class="bg-white">
+    <main>
+      <!-- Page header -->
+      <section
+        class="pt-lg-8 pb-8"
+        style="background-image: url(/assets/img/{{tourct.Background}})">
+        <div class="container pb-lg-8">
+          <div class="row align-items-center">
+            <div class="col-xl-7 col-lg-7 col-md-12">
+              <div>
+                <h1 class="text-white display-4 fw-semibold">
+                  {{tourct.Name}}
+                </h1>
+                <p class="text-white mb-6 lead">{{tourct.Mota}}</p>
+                <div class="d-flex align-items-center">
+                  <a href="#" class="bookmark text-white">
+                    <i class="fe fe-bookmark fs-4 me-2"></i>
+                    Đánh dấu
+                  </a>
+
+                  <span class="text-white ms-3">
+                    <i class="fe fe-user"></i>
+                    1200 Đã đăng ký
+                  </span>
+                  <div>
+                    <span class="fs-6 ms-4 align-text-top">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        fill="currentColor"
+                        class="bi bi-star-fill text-warning"
+                        viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        fill="currentColor"
+                        class="bi bi-star-fill text-warning"
+                        viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        fill="currentColor"
+                        class="bi bi-star-fill text-warning"
+                        viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        fill="currentColor"
+                        class="bi bi-star-fill text-warning"
+                        viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                      </svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        fill="currentColor"
+                        class="bi bi-star-fill text-warning"
+                        viewBox="0 0 16 16">
+                        <path
+                          d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                      </svg>
+                    </span>
+                    <span class="text-white">(140)</span>
+                  </div>
+                  <span class="text-white ms-4 d-none d-md-block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16
+                            16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <rect
+                        x="3"
+                        y="8"
+                        width="2"
+                        height="6"
+                        rx="1"
+                        fill="#DBD8E9"></rect>
+                      <rect
+                        x="7"
+                        y="5"
+                        width="2"
+                        height="9"
+                        rx="1"
+                        fill="#DBD8E9"></rect>
+                      <rect
+                        x="11"
+                        y="2"
+                        width="2"
+                        height="12"
+                        rx="1"
+                        fill="#DBD8E9"></rect>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page content -->
+      <section class="pb-8">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-12 col-12 mt-n8 mb-4 mb-lg-0">
+              <!-- Card -->
+              <div class="card rounded-3">
+                <!-- Card header -->
+                <div class="card-header border-bottom-0 p-0">
+                  <div>
+                    <!-- Nav -->
+                    <ul class="nav nav-lb-tab" id="tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <a
+                          class="nav-link active"
+                          id="table-tab"
+                          data-bs-toggle="pill"
+                          href="#table"
+                          role="tab"
+                          aria-controls="table"
+                          aria-selected="true">Nội Dung</a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a
+                          class="nav-link"
+                          id="description-tab"
+                          data-bs-toggle="pill"
+                          href="#description"
+                          role="tab"
+                          aria-controls="description"
+                          aria-selected="false"
+                          tabindex="-1">
+                          Giới Thiệu
+                        </a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a
+                          class="nav-link"
+                          id="review-tab"
+                          data-bs-toggle="pill"
+                          href="#review"
+                          role="tab"
+                          aria-controls="review"
+                          aria-selected="false"
+                          tabindex="-1">Đánh Giá</a>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <a
+                          class="nav-link"
+                          id="image-tab"
+                          data-bs-toggle="pill"
+                          href="#image"
+                          role="tab"
+                          aria-controls="image"
+                          aria-selected="false"
+                          tabindex="-1">Hình Ảnh</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="tab-content" id="tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="table"
+                      role="tabpanel"
+                      aria-labelledby="table-tab">
+                      <!-- Card -->
+                      <div class="accordion" id="courseAccordion">
+                        <div>
+                          <!-- List group -->
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item px-0 pt-0">
+                              <!-- Toggle -->
+                              <a
+                                class="h4 mb-0 d-flex align-items-center active"
+                                data-bs-toggle="collapse"
+                                href="#courseTwo"
+                                aria-expanded="true"
+                                aria-controls="courseTwo">
+                                <div class="me-auto">
+                                  NGÀY 1 (06/02/2024 – 27 Tết): OSAKA - KOBE -
+                                  OSAKA (Ăn trưa, tối)
+                                </div>
+                                <!-- Chevron -->
+                                <span class="chevron-arrow ms-4">
+                                  <i class="fe fe-chevron-down fs-4"></i>
+                                </span>
+                              </a>
+                              <!-- Row -->
+                              <!-- Collapse -->
+                              <div
+                                class="collapse show"
+                                id="courseTwo"
+                                data-bs-parent="#courseAccordion">
+                                <div class="pt-3 pb-2">
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>
+                                        07:00 sáng đến sân bay Kansai. Đi tham
+                                        quan Kobe - một trong những thành phố
+                                        cảng lớn của Nhật, tham quan khu China
+                                        Town.</span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Tham quan Công viên hoa Awaji
+                                        Hanasajiki nằm trên đỉnh đồi của đảo
+                                        Awaji nhìn ra vịnh Osaka, luôn tràn ngập
+                                        sắc hoa quanh năm, mỗi mùa có những loài
+                                        hoa đặc trưng..</span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>
+                                        Tự do mua sắm tại Khu thương mại
+                                        Shinsaibashi. Nghỉ đêm.
+                                      </span>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li class="list-group-item px-0">
+                              <!-- Toggle -->
+                              <a
+                                class="h4 mb-0 d-flex align-items-center collapsed"
+                                data-bs-toggle="collapse"
+                                href="#courseThree"
+                                aria-expanded="false"
+                                aria-controls="courseThree">
+                                <div class="me-auto">
+                                  <!-- Title -->
+                                  NGÀY 2 (07/02/2024: OSAKA - NAGOYA (Ăn sáng,
+                                  trưa, tối)
+                                </div>
+                                <!-- Chevron -->
+                                <span class="chevron-arrow ms-4">
+                                  <i class="fe fe-chevron-down fs-4"></i>
+                                </span>
+                              </a>
+                              <!-- Row -->
+                              <!-- Collapse -->
+                              <div
+                                class="collapse"
+                                id="courseThree"
+                                data-bs-parent="#courseAccordion"
+                                style>
+                                <div class="pt-3 pb-2">
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Trả phòng. Tham quan Cầu Togetsu dài
+                                        155m, cây cầu tồn tại như một biểu tượng
+                                        của núi Arashiyama với cảnh sắc phong
+                                        phú theo từng mùa.</span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Tham quan rừng tre Sagano, thưởng
+                                        thức
+                                        vẻ đẹp thiên nhiên của rừng tre.
+                                      </span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>ham quan Chùa Kinkakuji nằm nổi bật
+                                        trên mặt nền hồ nước trong xanh.
+                                      </span>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li class="list-group-item px-0">
+                              <!-- Toggle -->
+                              <a
+                                class="h4 mb-0 d-flex align-items-center collapsed"
+                                data-bs-toggle="collapse"
+                                href="#course4"
+                                aria-expanded="false"
+                                aria-controls="course4">
+                                <div class="me-auto">
+                                  <!-- Title -->
+                                  NGÀY 3: NAGOYA - HAKONE (Ăn sáng, trưa, tối)
+                                </div>
+                                <!-- Chevron -->
+                                <span class="chevron-arrow ms-4">
+                                  <i class="fe fe-chevron-down fs-4"></i>
+                                </span>
+                              </a>
+                              <!-- Row -->
+                              <!-- Collapse -->
+                              <div
+                                class="collapse"
+                                id="course4"
+                                data-bs-parent="#courseAccordion"
+                                style>
+                                <div class="pt-3 pb-2">
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Trả phòng. Tham quan Vườn trái cây,
+                                        thưởng thức và mua về làm quà cho người
+                                        thân các loại trái cây theo mùa tại
+                                        Vườn.</span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Trải nghiệm tàu tốc hành
+                                        Shinkanshen.
+                                        Khởi hành lên trạm số 5 (tùy theo điều
+                                        kiện thời tiết cho phép) tham quan và
+                                        chụp hình với Núi Phú Sỹ - biểu tượng
+                                        của Nhật (ngọn núi cao nhất Nhật Bản
+                                        3.776m).
+                                      </span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Nghỉ đêm. </span>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li class="list-group-item px-0">
+                              <!-- Toggle -->
+                              <a
+                                class="h4 mb-0 d-flex align-items-center collapsed"
+                                data-bs-toggle="collapse"
+                                href="#course5"
+                                aria-expanded="false"
+                                aria-controls="course5">
+                                <div class="me-auto">
+                                  <!-- Title -->
+                                  NGÀY 4: NÚI PHÚ SỸ - TOKYO (Ăn sáng, trưa,
+                                  tối)
+                                </div>
+                                <!-- Chevron -->
+                                <span class="chevron-arrow ms-4">
+                                  <i class="fe fe-chevron-down fs-4"></i>
+                                </span>
+                              </a>
+                              <!-- Row -->
+                              <!-- Collapse -->
+                              <div
+                                class="collapse"
+                                id="course5"
+                                data-bs-parent="#courseAccordion"
+                                style>
+                                <div class="pt-3 pb-2">
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Trả phòng. Thưởng ngoạn hoa anh đào
+                                        Kawazu là hoa anh đào nở sớm nhất ở Nhật
+                                        Bản, hoa có đặc điểm khác các loại hoa
+                                        anh đào khác là cánh lớn hơn và màu hồng
+                                        hơn.
+                                      </span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Tự do sắm tại khu thương mại điện tử
+                                        Akihabara.
+                                      </span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Nghỉ đêm. </span>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li class="list-group-item px-0">
+                              <!-- Toggle -->
+                              <a
+                                class="h4 mb-0 d-flex align-items-center collapsed"
+                                data-bs-toggle="collapse"
+                                href="#course6"
+                                aria-expanded="false"
+                                aria-controls="course6">
+                                <div class="me-auto">
+                                  <!-- Title -->
+                                  NGÀY 5: TOKYO - DISNEYLAND (Ăn sáng, trưa,
+                                  tối)
+                                </div>
+                                <!-- Chevron -->
+                                <span class="chevron-arrow ms-4">
+                                  <i class="fe fe-chevron-down fs-4"></i>
+                                </span>
+                              </a>
+                              <!-- Row -->
+                              <!-- Collapse -->
+                              <div
+                                class="collapse"
+                                id="course6"
+                                data-bs-parent="#courseAccordion"
+                                style>
+                                <div class="pt-3 pb-2">
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Trả phòng. Tham quan và chụp hình
+                                        (bên
+                                        ngoài) Cung điện Hoàng Gia.
+                                      </span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Tham quan chùa Quan Âm Asakusa - một
+                                        trong những công trình cổ nhất và nổi
+                                        tiếng tại Tokyo, mua sắm tại khu phố
+                                        Nakamise.
+                                      </span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Tham quan Disneyland - khu vui chơi
+                                        giải trí lớn nhất tại Nhật, hòa mình vào
+                                        xứ sở thần tiên của những câu chuyện cổ
+                                        tích hoặc tham gia vào thế giới của các
+                                        trò chơi mạo hiểm, phiêu lưu vào những
+                                        khu rừng rậm hoang sơ. Nghỉ đêm khách
+                                        sạn 4 sao địa phương.</span>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li class="list-group-item px-0">
+                              <!-- Toggle -->
+                              <a
+                                class="h4 mb-0 d-flex align-items-center collapsed"
+                                data-bs-toggle="collapse"
+                                href="#course6"
+                                aria-expanded="false"
+                                aria-controls="course6">
+                                <div class="me-auto">
+                                  <!-- Title -->
+                                  NGÀY 6: TOKYO - TP.HCM (Ăn sáng)
+                                </div>
+                                <!-- Chevron -->
+                                <span class="chevron-arrow ms-4">
+                                  <i class="fe fe-chevron-down fs-4"></i>
+                                </span>
+                              </a>
+                              <!-- Row -->
+                              <!-- Collapse -->
+                              <div
+                                class="collapse"
+                                id="course6"
+                                data-bs-parent="#courseAccordion"
+                                style>
+                                <div class="pt-3 pb-2">
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Trả phòng. Ra sân bay, làm thủ tục
+                                        đáp
+                                        chuyến bay VN301 (09:30-14:15) về
+                                        Tp.HCM.
+                                      </span>
+                                    </div>
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="mb-2 d-flex justify-content-between align-items-center text-inherit">
+                                    <div class="text-truncate">
+                                      <span>Kết thúc chương trình du lịch Nhật
+                                        Bản.
+                                      </span>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="description"
+                      role="tabpanel"
+                      aria-labelledby="description-tab">
+                      <!-- Description -->
+                      <div class="mb-4">
+                        <h3 class="mb-2">Giới thiệu chuyến đi</h3>
+                        <p>
+                          Hiện thực hóa ước mơ khám phá cảnh đẹp và văn hóa đặc
+                          sắc của xứ Phù Tang với thủ tục visa thuận lợi, nhanh
+                          chóng hơn bao giờ hết.
+                        </p>
+                        <p>
+                          Thưởng lãm một Tokyo hiện đại nhưng vẫn cảm nhận từng
+                          cung bậc cảm xúc khi dạo bước bên ngôi cổ tự Asakusa,
+                          Hoàng cung và không thể thiếu ngọn núi Phú Sĩ hùng vĩ
+                          - biểu tượng của nước Nhật.
+                        </p>
+                        <p>
+                          Khám phá cảnh sắc từ Tokyo đến Kyoto, kết nối Osaka
+                          với đền đài, chùa thiêng đẫm không khí thiền tịnh.
+                        </p>
+                        <p>
+                          Thỏa sức mua sắm hàng nội địa Nhật Bản tại các khu
+                          thương mại sầm uất.
+                        </p>
+                      </div>
+                      <div class="mb-4">
+                        <h3 class="mb-2">Giá tour bao gồm:</h3>
+                        <p>
+                          Vé máy bay khứ hồi theo đoàn. Visa Nhật Bản theo đoàn.
+                          Thuế sân bay, phí an ninh sân bay…Vé tàu Shinkanshen
+                          theo chương trình
+                        </p>
+                        <p>
+                          04 đêm khách sạn 3* & 01 đêm 4* địa phương theo hành
+                          trình. Tiêu chuẩn 02 người/phòng/02 giường đơn hoặc
+                          phòng Tatami kiểu Nhật.
+                        </p>
+                        <p>Ăn và vé tham quan theo chương trình.</p>
+                        <p>
+                          Hướng dẫn viên Lữ hành Saigontourist đi theo đoàn. Quà
+                          tặng của Lữ hành Saigontourist (Túi cần kéo + dù,
+                          nón…), thuế VAT.
+                        </p>
+                      </div>
+                      <div class="mb-4">
+                        <h3 class="mb-2">Giá tour không bao gồm::</h3>
+                        <p>
+                          Lệ phí làm hộ chiếu và visa nhập lại Việt Nam cho
+                          khách mang quốc tịch nước ngoài.
+                        </p>
+                        <p>
+                          Nước uống (Bia, rượu mạnh… trong bữa ăn), điện thoại,
+                          giặt ủi, hành lý quá cước theo qui định của hàng
+                          không.
+                        </p>
+                        <p>
+                          Thuốc men, bệnh viện…và các chi phí cá nhân khác của
+                          khách ngoài chương trình.
+                        </p>
+                        <p>
+                          Các chi phí phát sinh trong quá trình cách ly điều trị
+                          Covid-19, bao gồm các chi phí xét nghiệm, cách ly y
+                          tế, các chi phí cá nhân khác như đi lại, ăn uống và
+                          các chi phí điều trị y tế mà không nằm trong các điều
+                          khoản Bảo Hiểm du lịch.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="review"
+                      role="tabpanel"
+                      aria-labelledby="review-tab">
+                      <!-- Reviews -->
+                      <div class="mb-3">
+                        <h3 class="mb-4">
+                          Mọi người đánh giá chuyến đi như thế nào
+                        </h3>
+                        <div class="row align-items-center">
+                          <div class="col-auto text-center">
+                            <h3 class="display-2 fw-bold">4.5</h3>
+                            <span class="fs-6">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                class="bi bi-star-fill text-warning"
+                                viewBox="0 0 16 16">
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                class="bi bi-star-fill text-warning"
+                                viewBox="0 0 16 16">
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                class="bi bi-star-fill text-warning"
+                                viewBox="0 0 16 16">
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                class="bi bi-star-fill text-warning"
+                                viewBox="0 0 16 16">
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                              </svg>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="12"
+                                height="12"
+                                fill="currentColor"
+                                class="bi bi-star-fill text-warning"
+                                viewBox="0 0 16 16">
+                                <path
+                                  d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                              </svg>
+                            </span>
+                            <p class="mb-0 fs-6">(Based on 27 reviews)</p>
+                          </div>
+                          <!-- Progress Bar -->
+                          <div class="col order-3 order-md-2">
+                            <div class="progress mb-3" style="height: 6px">
+                              <div
+                                class="progress-bar bg-warning"
+                                role="progressbar"
+                                style="width: 90%"
+                                aria-valuenow="90"
+                                aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                            </div>
+                            <div class="progress mb-3" style="height: 6px">
+                              <div
+                                class="progress-bar bg-warning"
+                                role="progressbar"
+                                style="width: 80%"
+                                aria-valuenow="80"
+                                aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                            </div>
+                            <div class="progress mb-3" style="height: 6px">
+                              <div
+                                class="progress-bar bg-warning"
+                                role="progressbar"
+                                style="width: 70%"
+                                aria-valuenow="70"
+                                aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                            </div>
+                            <div class="progress mb-3" style="height: 6px">
+                              <div
+                                class="progress-bar bg-warning"
+                                role="progressbar"
+                                style="width: 60%"
+                                aria-valuenow="60"
+                                aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                            </div>
+                            <div class="progress mb-0" style="height: 6px">
+                              <div
+                                class="progress-bar bg-warning"
+                                role="progressbar"
+                                style="width: 50%"
+                                aria-valuenow="50"
+                                aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-auto col-6 order-2 order-md-3">
+                            <!-- Rating -->
+                            <div>
+                              <span class="fs-6">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                              </span>
+                              <span class="ms-1">53%</span>
+                            </div>
+                            <div>
+                              <span class="fs-6">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-light"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                              </span>
+                              <span class="ms-1">36%</span>
+                            </div>
+                            <div>
+                              <span class="fs-6">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-light"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-light"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                              </span>
+                              <span class="ms-1">9%</span>
+                            </div>
+                            <div>
+                              <span class="fs-6">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-light"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-light"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-light"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                              </span>
+                              <span class="ms-1">3%</span>
+                            </div>
+                            <div>
+                              <span class="fs-6">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-light"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-light"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-light"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-light"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                              </span>
+                              <span class="ms-1">2%</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="my-5" />
+                      <div class="mb-3">
+                        <div
+                          class="d-lg-flex align-items-center justify-content-between mb-5">
+                          <!-- Reviews -->
+                          <div class="mb-3 mb-lg-0">
+                            <h3 class="mb-0">Đánh giá</h3>
+                          </div>
+                          <div>
+                            <form class="form-inline">
+                              <div class="d-flex align-items-center me-2">
+                                <span class="position-absolute ps-3">
+                                  <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                                <input
+                                  type="search"
+                                  class="form-control ps-6"
+                                  placeholder="Search Review" />
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <!-- Rating -->
+                        <div
+                          class="d-flex align-items-start border-bottom pb-4 mb-4">
+                          <img
+                            src="/assets/img/bloguser1.png"
+                            alt
+                            class="rounded-circle avatar-lg" />
+                          <div class="ms-3">
+                            <h4 class="mb-1">
+                              Minh Trung
+                              <span class="ms-1 fs-6">2 ngày trước</span>
+                            </h4>
+                            <div class="mb-2">
+                              <span class="fs-6">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                              </span>
+                            </div>
+                            <p>rất tốt</p>
+                            <div class="d-lg-flex">
+                              <p class="mb-0">Nó có mang lại hiệu quả?</p>
+                              <a href="#"
+                                class="btn btn-xs btn-primary ms-lg-3">Có</a>
+                              <a
+                                href="#"
+                                class="btn btn-xs btn-outline-secondary ms-1">Không</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Rating -->
+                        <div
+                          class="d-flex align-items-start border-bottom pb-4 mb-4">
+                          <img
+                            src="/assets/img/bloguser5.png"
+                            alt
+                            class="rounded-circle avatar-lg" />
+                          <div class="ms-3">
+                            <h4 class="mb-1">
+                              Hoàng Long
+                              <span class="ms-1 fs-6">3 Ngày trước</span>
+                            </h4>
+                            <div class="mb-2">
+                              <span class="fs-6">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                              </span>
+                            </div>
+                            <p>tốt lắm !!!</p>
+                            <div class="d-lg-flex">
+                              <p class="mb-0">Nó có mang lại hiệu quả?</p>
+                              <a href="#"
+                                class="btn btn-xs btn-primary ms-lg-3">Có</a>
+                              <a
+                                href="#"
+                                class="btn btn-xs btn-outline-secondary ms-1">No</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Rating -->
+                        <div
+                          class="d-flex align-items-start border-bottom pb-4 mb-4">
+                          <img
+                            src="/assets/img/bloguser2.png"
+                            alt
+                            class="rounded-circle avatar-lg" />
+                          <div class="ms-3">
+                            <h4 class="mb-1">
+                              Hồng Lệ
+                              <span class="ms-1 fs-6">4 ngày trước</span>
+                            </h4>
+                            <div class="mb-2">
+                              <span class="fs-6">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                              </span>
+                            </div>
+                            <p>tuyệt vời</p>
+                            <div class="d-lg-flex">
+                              <p class="mb-0">Nó có mang lại hiệu quả?</p>
+                              <a href="#"
+                                class="btn btn-xs btn-primary ms-lg-3">Có</a>
+                              <a
+                                href="#"
+                                class="btn btn-xs btn-outline-secondary ms-1">Không</a>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Rating -->
+                        <div class="d-flex align-items-start">
+                          <img
+                            src="/assets/img/bloguser4.png"
+                            alt
+                            class="rounded-circle avatar-lg" />
+                          <div class="ms-3">
+                            <h4 class="mb-1">
+                              Xuân Trường
+                              <span class="ms-1 fs-6">5 ngày trước</span>
+                            </h4>
+                            <div class="mb-2">
+                              <span class="fs-6">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="12"
+                                  height="12"
+                                  fill="currentColor"
+                                  class="bi bi-star-fill text-warning"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                </svg>
+                              </span>
+                            </div>
+                            <p>tôi tận hưởng nó rất thoải mái cảm ơn</p>
+                            <div class="d-lg-flex">
+                              <p class="mb-0">Nó có mang lại hiệu quả?</p>
+                              <a href="#"
+                                class="btn btn-xs btn-primary ms-lg-3">Có</a>
+                              <a
+                                href="#"
+                                class="btn btn-xs btn-outline-secondary ms-1">Không</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Tab pane -->
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="image"
+                    role="tabpanel"
+                    aria-labelledby="img-tab">
+                    <div class="container">
+                      <div class="row" style="margin: 15px">
+                        <a
+                          href="#"
+                          data-toggle="lightbox"
+                          data-gallery="gallery"
+                          class="col-md-4">
+                          <img
+                            src="/assets/img/japanct1.jpg"
+                            class="img-fluid rounded" />
+                        </a>
+                        <a
+                          href="#"
+                          data-toggle="lightbox"
+                          data-gallery="gallery"
+                          class="col-md-4">
+                          <img
+                            src="/assets/img/japanct2.jpg"
+                            class="img-fluid rounded" />
+                        </a>
+                        <a
+                          href="#"
+                          data-toggle="lightbox"
+                          data-gallery="gallery"
+                          class="col-md-4">
+                          <img
+                            src="/assets/img/japanct3.jpg"
+                            class="img-fluid rounded" />
+                        </a>
+                      </div>
+                      <div class="row" style="margin: 15px">
+                        <a
+                          href="#"
+                          data-toggle="lightbox"
+                          data-gallery="gallery"
+                          class="col-md-4">
+                          <img
+                            src="/assets/img/japanct4.jpg"
+                            class="img-fluid rounded" />
+                        </a>
+                        <a
+                          href="#"
+                          data-toggle="lightbox"
+                          data-gallery="gallery"
+                          class="col-md-4">
+                          <img
+                            src="/assets/img/japanct5.jpg"
+                            class="img-fluid rounded" />
+                        </a>
+                        <a
+                          href="#"
+                          data-toggle="lightbox"
+                          data-gallery="gallery"
+                          class="col-md-4">
+                          <img
+                            src="/assets/img/japanct6.jpg"
+                            class="img-fluid rounded" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12 mt-lg-n8">
+              <!-- Card -->
+              <div class="card mb-3 mb-4">
+                <div class="p-1">
+                  <div
+                    class="d-flex justify-content-center align-items-center rounded border-white border rounded-3 bg-cover"
+                    style="
+                      background-image: url(/assets/img/{{tourct.Img}});
+                      height: 210px;
+                    "></div>
+                </div>
+                <!-- Card body -->
+                <div class="card-body">
+                  <!-- Price single page -->
+                  <div class="mb-3">
+                    <span class="text-dark fw-bold h2">{{tourct.Price|number}}
+                      VND</span>
+                    <del class="fs-4">12.000.000 VND</del>
+                  </div>
+                  <div class="d-grid">
+                    <a href="javascript:void(0)"
+                      class="btn btn-primary mb-2">đặt ngay</a>
+                    <a
+                      href="javascript:void(0)"
+                      class="btn btn-outline-primary"
+                      ng-click="add2()">Thêm vào giở hàng</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card -->
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="pt-8 pb-3">
+            <div class="row d-md-flex align-items-center mb-4">
+              <div class="col-12">
+                <h2 class="mb-0">Các chuyến đi liên quan</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-12">
+                <!-- Card -->
+                <div class="card mb-4 card-hover">
+                  <a href="#"><img
+                      src="/assets/img/tk9.jpg"
+                      alt="course"
+                      class="card-img-top" /></a>
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <h4 class="mb-2 text-truncate-line-2">
+                      <a href="#" class="text-inherit">Trung quốc (Châu Á)</a>
+                    </h4>
+                    <ul class="mb-3 list-inline">
+                      <li class="list-inline-item">Trung Quốc</li>
+                    </ul>
+                    <div class="mt-3 d-flex align-baseline lh-1">
+                      <span class="fs-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                      </span>
+                      <span class="text-warning mx-1">5</span>
+                      <span class="fs-6">(7.700)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12">
+                <!-- Card -->
+                <div class="card mb-4 card-hover">
+                  <a href="#"><img
+                      src="/assets/img/tk12.jpg"
+                      alt="course"
+                      class="card-img-top" /></a>
+                  <!-- Card body -->
+                  <div class="card-body">
+                    <h4 class="mb-2 text-truncate-line-2">
+                      <a href="#" class="text-inherit">Hà Nội</a>
+                    </h4>
+                    <ul class="mb-3 list-inline">
+                      <li class="list-inline-item">Việt Nam</li>
+                    </ul>
+                    <div class="mt-3 d-flex align-baseline lh-1">
+                      <span class="fs-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                      </span>
+                      <span class="text-warning mx-1">4.9</span>
+                      <span class="fs-6">(9,300)</span>
+                    </div>
+                  </div>
+                  <!-- Card footer -->
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12">
+                <!-- Card -->
+                <div class="card mb-4 card-hover">
+                  <a href="#"><img
+                      src="/assets/img/tk15.jpg"
+                      alt="course"
+                      class="card-img-top" /></a>
+                  <div class="card-body">
+                    <h4 class="mb-2 text-truncate-line-2">
+                      <a href="#" class="text-inherit">Cần Thơ</a>
+                    </h4>
+                    <ul class="mb-3 list-inline">
+                      <li class="list-inline-item">Việt Nam</li>
+                    </ul>
+                    <div class="mt-3 d-flex align-baseline lh-1">
+                      <span class="fs-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                      </span>
+                      <span class="text-warning mx-1">4.9</span>
+                      <span class="fs-6">(8,890)</span>
+                    </div>
+                  </div>
+
+                  <!-- Image -->
+
+                  <!-- Card footer -->
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="card mb-4 card-hover">
+                  <a href="#"><img
+                      src="/assets/img/tk6.jpg"
+                      alt="course"
+                      class="card-img-top" /></a>
+                  <div class="card-body">
+                    <h4 class="mb-2 text-truncate-line-2">
+                      <a href="#" class="text-inherit">Hà Lan</a>
+                    </h4>
+                    <ul class="mb-3 list-inline">
+                      <li class="list-inline-item">Châu Âu</li>
+                    </ul>
+                    <div class="mt-3 d-flex align-baseline lh-1">
+                      <span class="fs-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="12"
+                          fill="currentColor"
+                          class="bi bi-star-fill text-warning"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                        </svg>
+                      </span>
+                      <span class="text-warning mx-1">4.8</span>
+                      <span class="fs-6">(13,245)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/bootstrap-5.3.2-dist/js/jquery.min.js"></script>
+  </body>
+</html>
