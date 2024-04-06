@@ -478,21 +478,21 @@ function myfunc($scope, $http) {
 var app = angular.module("myapp", ["ngRoute"]);
 app.config(function ($routeProvider) {
   $routeProvider
-    .when("/home", { templateUrl: "about.html" })
-    .when("/about", { templateUrl: "tour.html" })
-    .when("/blog", { templateUrl: "blog.html" })
-    .when("/cart", { templateUrl: "cart.html" })
-    .when("/tour", { templateUrl: "alltour.html" })
-    .when("/login", { templateUrl: "login.html" })
-    .when("/reg", { templateUrl: "regis.html" })
-    .when("/loginsucc", { templateUrl: "alltour.html" })
-    .when("/regissucc", { templateUrl: "login.html" })
+    .when("/home", { templateUrl: "forms/about.html" })
+    .when("/about", { templateUrl: "forms/tour.html" })
+    .when("/blog", { templateUrl: "forms/blog.html" })
+    .when("/cart", { templateUrl: "forms/cart.html" })
+    .when("/tour", { templateUrl: "forms/alltour.html" })
+    .when("/login", { templateUrl: "forms/login.html" })
+    .when("/reg", { templateUrl: "forms/regis.html" })
+    .when("/loginsucc", { templateUrl: "forms/alltour.html" })
+    .when("/regissucc", { templateUrl: "forms/login.html" })
     .when("/alltour/:id", {
       templateUrl: "/ASM/forms/tourchitiet.html",
       controller: "tourCtrl",
     })
     .otherwise({
-      templateUrl: "about.html",
+      templateUrl: "forms/about.html",
     });
 });
 app.run(function ($rootScope) {
